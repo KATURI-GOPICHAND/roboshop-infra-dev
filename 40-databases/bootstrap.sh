@@ -3,9 +3,10 @@
 component=$1
 dnf install ansible -y
 
-cd /home/ec2-user
-git clone https://github.com/KATURI-GOPICHAND/ansible-roboshop-roles-tf.git
+if [ ! -d "ansible-roboshop-roles-tf" ]; then
+    git clone https://github.com/KATURI-GOPICHAND/ansible-roboshop-roles-tf.git
+fi
 
-cd ansible-roboshop-roles-tf
+cd /home/ec2-user/ansible-roboshop-roles-tf
 ansible-playbook -e component=$component roboshop.yaml
 
