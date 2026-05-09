@@ -12,7 +12,9 @@ resource "aws_instance" "mongodb" {
 }
 resource "terraform_data" "bootstrap" {
   triggers_replace = [
-    aws_instance.mongodb.id
+    aws_instance.mongodb.id,
+    filemd5("bootstrap.sh")
+
   ]
 
   connection {
