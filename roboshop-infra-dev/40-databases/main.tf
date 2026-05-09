@@ -10,7 +10,7 @@ resource "aws_instance" "mongodb" {
     local.common_tags
   )
 }
-resource "terraform_data" "bootstarp" {
+resource "terraform_data" "bootstrap" {
   triggers_replace = [
     aws_instance.mongodb.id
   ]
