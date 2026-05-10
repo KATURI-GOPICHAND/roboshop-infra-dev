@@ -24,7 +24,7 @@ resource "terraform_data" "bootstrap" {
   }
 
   provisioner "file" {
-    source = "bootstrap.sh"  # Local file path
+    source = "${path.module}/bootstrap.sh" # Local file path
     destination = "/tmp/bootstrap.sh" # destination path on the remote machine
   }
 
