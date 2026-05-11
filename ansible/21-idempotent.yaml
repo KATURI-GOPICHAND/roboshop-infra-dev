@@ -1,8 +1,0 @@
-- name: check idempotentency
-  become: yes
-  hosts: local
-  connection: local
-  tasks:
-  - name: user creation
-    ansible.builtin.user:
-      name: Gopichand
