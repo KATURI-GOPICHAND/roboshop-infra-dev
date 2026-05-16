@@ -1,5 +1,5 @@
 resource "aws_iam_role" "mysql" {
-  name = "test_role"
+  name = local.mysql_role_name #Roboshop-Dev-Mysql
 
   # Terraform's "jsonencode" function converts a
   # Terraform expression result to valid JSON syntax.
@@ -17,7 +17,10 @@ resource "aws_iam_role" "mysql" {
     ]
   })
 
-  tags = {
-    tag-key = "tag-value"
-  }
+  tags = merge(
+    {
+      Name = local.mysql_role_name
+    },
+    local.common_tags
+  )
 }
