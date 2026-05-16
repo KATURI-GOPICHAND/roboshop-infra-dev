@@ -59,6 +59,7 @@ resource "aws_iam_role_policy_attachment" "bastion" {
   policy_arn = "arn:aws:iam::aws:policy/AdministratorAccess"
 }
 
+# create the instance profile
 resource "aws_iam_instance_profile" "bastion" {
   name = "${var.project}-${var.environment}-bastion"
   role = aws_iam_role.bastion.name
