@@ -13,3 +13,7 @@ variable "zone_id" {
 variable "domain_name" {
   default = "88sdaws.fun"
 }
+
+variable "app_version" {
+  default = "v3"
+}
