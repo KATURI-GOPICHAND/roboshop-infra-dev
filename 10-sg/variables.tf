@@ -16,7 +16,7 @@ variable "sg_names" {
       #Backend ALB
       "backend_alb",
       #Frontend ALB
-      "frontend_alb",
+      "forntend_alb",
       #Bastion
       "bastion"
 
