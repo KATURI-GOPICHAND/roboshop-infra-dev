@@ -7,12 +7,12 @@ terraform {
   }
 
   backend "s3" {
-    bucket = "remote-stateaws-88s-dev"
-    key = "roboshop-dev-sg-rules" 
-    region = "us-east-1"
-    encrypt = true
+    bucket       = "remote-stateaws-88s-dev"
+    key          = "roboshop-dev-sg-rules"
+    region       = "us-east-1"
+    encrypt      = true
     use_lockfile = true
-  } 
+  }
 
 }
 

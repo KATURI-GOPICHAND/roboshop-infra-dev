@@ -15,12 +15,13 @@ variable "sg_names" {
     "catalogue", "user", "cart", "shipping", "payment",
     #Backend ALB
     "backend_alb",
+     #Bastion
+    "bastion",
     # Frontend
     "frontend",
     #Frontend ALB
-    "frontend_alb",
-    #Bastion
-    "bastion"
+    "frontend_alb"
+   
 
   ]
 }
